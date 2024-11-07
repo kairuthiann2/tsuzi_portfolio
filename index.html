@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porfolio</title>
+    <!--=============== GOOGLE FONTS ===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css"
+      crossorigin=""
+    />
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/main/home.css" />
+    <link rel="stylesheet" href="./css/main/about.css" />
+    <link rel="stylesheet" href="./css/main/gallery.css" />
+    <link rel="stylesheet" href="./css/main/testimonials.css" />
+    <link rel="stylesheet" href="./css/main/contact.css" />
+
+    <!--=============== SCRIPTS ===============-->
+    <script src="./scripts/main.js" defer></script>
+    <script src="./scripts/contact.js" defer></script>
+    <script src="./scripts/nav.js" defer></script>
+    <!------ EMAILJS ------->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "bMCuPG2apnj57JV_t",
+        });
+      })();
+    </script>
+  </head>
+  
+  <body>
+    <!--======================= HEADER SECTION =======================-->
+    <header>
+      <h2>Sizzlette</h2>
+      <nav>
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact" class="contact-btn">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Icons -->
+      <div class="nav-icons">
+        <!-- Theme Toggle (To switch between themes) -->
+        <i class="ri-moon-line theme-button" id="theme_button"></i>
+
+        <!-- Hamburger icon (To open on small screens) -->
+        <i class="ri-menu-4-line nav-toggle" id="nav_toggle"></i>
+
+        <!-- Close icon (To close menu when open) -->
+        <i class="ri-close-line nav-close" id="nav_close"></i>
+      </div>
+    </header>
+    <!-- End of HEADER SECTION-->
+
+    <!--======================= MAIN SECTION =======================-->
+    <main>
+      <!--======================= HOME SECTION =======================-->
+      <section id="home">
+        <div class="home-container">
+          <div class="left-intro">
+            <h1>Chef Issa</h1>
+            <h4>Specilization in</h4>
+            <ul>
+              <li>Hot Kitchens</li>
+              <li>Pastry Making</li>
+              <li>Bakery Products</li>
+              <li>Menu Planning</li>
+              <li>Food Safety and Hygiene</li>
+              <li>Plating and Presentation</li>
+            </ul>
+          </div>
+          <div class="right-img">
+            <img
+              src="./images/portfolio/sham.jpeg"
+              width="400px"
+              height="450px"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- End of HOME SECTION -->
+
+      <!--======================= ABOUT SECTION =======================-->
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+          <div class="about-img">
+            <img
+              src="./images/portfolio/about2.jpeg"
+              width="400px"
+              height="450px"
+            />
+          </div>
+          <div class="about-para">
+            <p>
+              Hello! I am <strong>Issa Tsuzi</strong>, a dedicated and
+              passionate chef with a specialization in
+              <span class="highlight">Hot Kitchens</span> and
+              <span class="highlight">Pastry Making</span>. My culinary journey
+              started at the prestigious <strong>Utalii College</strong>, where
+              I mastered a variety of traditional and modern culinary
+              techniques. With over a decade of experience in both fine dining
+              and casual restaurants, I have developed a keen eye for detail and
+              an unwavering commitment to
+              <span class="highlight">Food Safety and Hygiene</span>. I thrive
+              on creativity in the kitchen, whether I’m creating innovative
+              <span class="highlight">Bakery Products</span>, planning intricate
+              menus, or perfecting the art of
+              <span class="highlight">Plating and Presentation</span> to ensure
+              every dish is a visual masterpiece.
+            </p>
+            <div class="cv">
+              <button type="submit">See More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of ABOUT SECTION -->
+
+      <!--======================= GALLERY SECTION =======================-->
+      <section id="gallery">
+        <h2>My Work</h2>
+        <div class="gallery-container">
+          <!-- Gellery Item 1 -->
+          <div class="gallery-img">
+            <figure>
+              <img
+                src="./images/portfolio/pastry.jpeg"
+                alt="croissant"
+                width="400px"
+                height="450px"
+              />
+              <figcaption>Croissant</figcaption>
+            </figure>
+            <div class="img-overlay">
+              <p>Experience the art of pastry making</p>
+            </div>
+          </div>
+          <!-- Gellery Item 2 -->
+          <div class="gallery-img">
+            <figure>
+              <img
+                src="./images/portfolio/backery-p.jpeg"
+                alt="swiss-roll"
+                width="400px"
+                height="450px"
+              />
+              <figcaption>Swiss Roll</figcaption>
+            </figure>
+            <div class="img-overlay">
+              <p>A soft and spongy Swiss roll filled with sweetnes</p>
+            </div>
+          </div>
+          <!-- Gellery Item 3 -->
+          <div class="gallery-img">
+            <figure>
+              <img
+                src="./images/portfolio/plating.jpeg"
+                alt="snack-on-plate"
+                width="400px"
+                height="450px"
+              />
+              <figcaption>Equisite Plating</figcaption>
+            </figure>
+
+            <div class="img-overlay">
+              <p>Crafting the perfect bite with artistic plating</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of GALLERY SECTION -->
+
+      <!--======================= TESTIMONIALS SECTION =======================-->
+      <section id="testimonials">
+        <h2>What People Say</h2>
+        <div class="testimonials-container">
+          <!-- Testimonial 1 -->
+          <div class="testimonial">
+            <figure>
+              <img
+                src="./images/portfolio/client1.jpg"
+                width="60px"
+                height="60px"
+              />
+              <figcaption><p>&mdash; Brendah k</p></figcaption>
+              <blockquote>
+                Chef Issa has a gift for creating both visually stunning and
+                delicious dishes. Her attention to detail is unmatched.
+              </blockquote>
+            </figure>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="testimonial">
+            <figure>
+              <img
+                src="./images/portfolio/client2.jpg"
+                width="60px"
+                height="60px"
+              />
+              <figcaption><p>&mdash; Shanon stirk</p></figcaption>
+              <blockquote>
+                Every pastry she bakes is better than the last. Truly
+                world-class!
+              </blockquote>
+            </figure>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="testimonial">
+            <figure>
+              <img
+                src="./images/portfolio/client3.jpg"
+                width="60px"
+                height="60px"
+              />
+              <figcaption><p>&mdash; Cynthia Wills</p></figcaption>
+              <blockquote>
+                Her pastries are simply out of this world. Every bite is a
+                symphony of flavor!
+              </blockquote>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <!-- End of TESTIMONIALS SECTION -->
+
+      <!--======================= CONTACT SECTION =======================-->
+      <section id="contact">
+        <h2>Contact</h2>
+
+        <div class="contact-card">
+          <!-- Left Card -->
+          <div class="contact-info">
+            <h4>Let's Get in Touch</h4>
+            <p class="paragraph">I'm open for a chat or any suggestions.</p>
+
+            <!-- Contact details -->
+            <div class="contact-details">
+              <div class="detail-item">
+                <img src="./images/icons/address.png" alt="Address Icon" />
+                <p>123 Main Street, City, Country</p>
+              </div>
+
+              <div class="detail-item">
+                <img src="./images/icons/phone.png" alt="Phone Icon" />
+                <p>+254 769 207 805</p>
+              </div>
+
+              <div class="detail-item">
+                <img src="./images/icons/email.png" alt="Email Icon" />
+                <p>example@email.com</p>
+              </div>
+
+              <!-- Social Media Links -->
+              <div class="socials">
+                <a
+                  href="https://www.linkedin.com/in/kairuthiann/"
+                  target="_blank"
+                  ><img src="./images/icons/linkedln.png" alt="LinkedIn Icon"
+                /></a>
+
+                <a
+                  href="https://www.linkedin.com/in/kairuthiann/"
+                  target="_blank"
+                  ><img src="./images/icons/x.png" alt="X Icon"
+                /></a>
+
+                <a
+                  href="https://www.linkedin.com/in/kairuthiann/"
+                  target="_blank"
+                  ><img src="./images/icons/whatsapp.png" alt="WhatsApp Icon"
+                /></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Card -->
+          <div class="contact-form">
+            <h4>Send Me a Message</h4>
+
+            <form id="contact_form">
+              <input
+                type="text"
+                name="user_name"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="email"
+                name="user_email"
+                placeholder="Your Email"
+                required
+              />
+              <input
+                type="text"
+                name="user_subject"
+                placeholder="Subject"
+                required
+              />
+              <textarea
+                name="user_message"
+                rows="8"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button type="submit">Send Message</button>
+              <p class="contact-message" id="contact_message"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- End of CONTACT SECTION-->
+    </main>
+    <!-- End of MAIN SECTION -->
+
+    <!--======================= FOOTER SECTION =======================-->
+    <footer id="footer">
+      <div class="footer-container">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+
+        <span>
+          &copy; All rights reserved by
+          <a href="#">Shef Issa</a>
+        </span>
+      </div>
+    </footer>
+    <!-- End of FOOTER SECTION-->
+  </body>
+</html>
