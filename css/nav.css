@@ -1,0 +1,315 @@
+/*  --- HEADER SECTION --- */
+
+/*  --- Main styling for the header container --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  height: 2rem;
+  padding: 20px;
+  z-index: 1;
+  background-color: #FDEED9;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Shadow when scrolling */
+header.scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- NAVIGATION MENU --- */
+
+/* style for the Sizzlette Logo*/
+header h2 {
+  font-size: 24px;
+  color: #ef7a85;
+  margin: 0;
+}
+
+/* Style for the Navigation Menu */
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.45rem;
+}
+
+/* General styling for navigation list items */
+header nav ul li {
+  font-size: 1.24rem;
+}
+
+/* --- NAVIGATION LINKS --- */
+
+/* General styling for all navigation links */
+header nav ul li a {
+  text-decoration: none;
+  color: grey;
+  padding: 8px 15px;
+  transition: all 0.1s ease;
+  position: relative;
+  display: inline-block;
+}
+
+/* --- ACTIVE LINK STYLING --- */
+
+/* Active state for the navigation links */
+header nav ul li a.active {
+  color: black;
+  
+}
+header nav ul li a.active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  margin-left: 0.85rem;
+  left: 0;
+  width: 40%;
+  height: 2px;
+  background-color: #ef7a85;
+}
+
+/* --- HOVER EFFECTS --- */
+
+/* Hover effect for navigation links */
+header nav ul li a:hover {
+  color: black;
+}
+header nav ul li a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  margin-left: 0.85rem;
+  left: 0;
+  width: 40%;
+  height: 2px;
+  background-color: #ef7a85;
+}
+
+/* --- BORDER EFFECT DEFAULT STATE --- */
+
+/* Border effect in the default state (no border) */
+header nav ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  margin-left: 0.85rem;
+  left: 0;
+  width: 0; /* No border initially */
+  height: 2px;
+  background-color: transparent;
+  transition: width 0.1s ease, background-color 0.1s ease;
+}
+
+/* Show the border on hover or when active */
+header nav ul li a:hover::before,
+header nav ul li a:active::before {
+  width: 40%; /* Border bottom width */
+  background-color: #ef7a85;
+}
+
+/* --- CONTACT BUTTON (SPECIAL NAV ITEM) --- */
+
+/* Special styling for the "Contact" link */
+header nav ul li a.contact-btn {
+  background-color: white;
+  border: 1.75px solid #ef7a85;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  color: #ef7a85;
+}
+
+/* Hover effect for the "Contact" link */
+header nav ul li a.contact-btn:hover {
+  background-color: #ef7a85;
+  color: white;
+  cursor: pointer;
+}
+
+/* Remove border effects for the "Contact" link*/
+header nav ul li a.contact-btn::before {
+  display: none;
+}
+
+/* --- NAV ICONS (HAMBURGER, THEME) --- */
+
+
+
+/* --- MEDIA QUERIES (RESPONSIVE DESIGN) --- */
+
+/* Small screens (Mobile) */
+@media (max-width: 669px) {
+  header {
+    padding: 30px;
+    
+  }
+  header h2 {
+    font-size: 18px;
+  }
+  header nav ul {
+    display: none;  /*Initially hide nav menu on small screens */
+    gap: 0.6rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    /*height: 100vh;*/
+    background-color: aqua;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*z-index: 6;*/
+    cursor: pointer;
+    
+  }
+  header nav ul.show-menu {
+    display: flex;
+    
+  }
+  header nav ul li {
+    font-size: 0.9rem;
+  }
+  header nav ul li a {
+    padding: 5px 6px;
+    
+  }
+  .nav-icons{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.6rem;
+  }
+  
+  .nav-toggle {
+    display: inline-block;
+    color: white;
+    padding: 4px;
+    border: none;
+    border-radius: 8px solid #ef7a85;
+    background: #ef7a85;
+    
+  }
+  .nav-close {
+    display: none;
+    color: white;
+    z-index: 20;
+   
+  }
+  .theme-button{
+    color: grey;
+  }
+  header nav ul .show-menu ~ .nav-close {
+    display: inline-block;
+  }
+  header nav ul .show-menu ~ .nav-toggle {
+    display: none;
+  }
+}
+
+/* medium screens (Tables) */
+@media (min-width: 670px) and (max-width: 991px) {
+  header {
+    padding: 35px;
+  }
+  header h2 {
+    font-size: 19px;
+  }
+  header nav ul {
+    display: none;  /*Initially hide nav menu on small screens */
+    gap: 0.6rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    /*height: 100vh;*/
+    background-color: aqua;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+  }
+  header nav ul.show-menu {
+    display: flex;
+  }
+  header nav ul li {
+    font-size: 0.9rem;
+  }
+  header nav ul li a {
+    padding: 5px 6px;
+    
+  }
+  .nav-icons{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.7rem;
+    
+  }
+  
+  .nav-toggle {
+    display: inline-block;
+    color: white;
+    padding: 4px;
+    border: none;
+    border-radius: 8px solid #ef7a85;
+    background: #ef7a85;
+    
+  }
+  .nav-close {
+    display: none;
+    color: white;
+    z-index: 20;
+   
+  }
+  .theme-button{
+    color: grey;
+  }
+  header nav ul .show-menu ~ .nav-close {
+    display: inline-block;
+  }
+  header nav ul .show-menu ~ .nav-toggle {
+    display: none;
+  }
+  header nav ul {
+    gap: 1.1rem;
+  }
+  header nav ul li {
+    font-size: 1.2rem;
+  }
+  header nav ul li a {
+    padding: 6px 7px;
+  }
+}
+/* Large screens (Desktops) */
+@media (min-width: 992px) {
+  header {
+    padding: 35px;
+  }
+  header h2 {
+    font-size: 22px;
+  }
+  
+  .nav-toggle {
+   display: none;
+    
+  }
+  .nav-close {
+    display: none;
+   
+  }
+  .theme-button{
+    font-size: 1.8rem;
+    color: grey;
+  }
+  header nav ul {
+    gap: 1.5rem;
+  }
+  header nav ul li {
+    font-size: 1rem;
+  }
+  header nav ul li a {
+    padding: 9px 15px;
+  }
+}
