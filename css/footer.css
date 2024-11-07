@@ -1,0 +1,66 @@
+#footer {
+  bottom: 0;
+  background-color: #FDEED9;
+  
+}
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Style for the list inside the footer */
+.footer-container ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.45rem;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+/* Style for the list items */
+.footer-container ul li{
+  font-size: 1.24rem;
+}
+
+/* Style for the footer links */
+.footer-container ul li a{
+  text-decoration: none;
+  color: black;
+  transition: color 0.2s ease;
+}
+.footer-container ul li a:hover{
+  color: grey;
+}
+
+/* Style for the copyright text */
+.footer-container span {
+    font-size: 1rem;
+    color: black;
+}
+.footer-container span a {
+    text-decoration: none;
+    color: #6E44FF;
+}
+.footer-container span a:hover {
+    color: #ef7a85;
+}
+
+/* Smaller screens */
+@media (max-width: 669px) {
+  #footer {
+    max-width: 100%;
+  }
+  .footer-container ul{
+  gap: 1rem;
+  padding: 0;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+}
